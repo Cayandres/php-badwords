@@ -14,8 +14,15 @@ $wordCensured = $_GET['wordCensured'];
   <title></title>
 </head>
 <body>
-  <h1><?php echo $testo ?></h1>
-  <h1><?php echo $wordCensured ?></h1>
+  <h1>Il testo originale è:</h1>
+  <p><?php echo $testo ?></p>
+  <span>il testo contiene <?php echo strlen($testo) ?> caratteri</span>
+  <h2>La parola da censurare è:</h2>
+  <p><?php echo $wordCensured ?></p>
+  <span>la parola contiene <?php echo strlen($wordCensured) ?> lettere</span>
+  <h2>Il testo con la parola censurata è:</h2>
+  <div><?php echo str_replace($wordCensured,"***",$testo)?></div>
+
   
 </body>
 </html>
